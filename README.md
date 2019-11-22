@@ -8,7 +8,7 @@ See [PowerShellOneLiners.ps1](PowerShellOneLiners.ps1) for some PowerShell one-l
 
 * [Don't escape single quotes in JSON](PowerShellOneLiners.ps1#L75) *Easier readable ARM templates when updating them with PowerShell*
 
-* [SEscape non-ASCII](PowerShellOneLiners.ps1#L93) *Sometimes it's hard to get data out with non ASCII charsets - JSON support escaping*
+* [Escape non-ASCII](PowerShellOneLiners.ps1#L93) *Sometimes it's hard to get data out with non ASCII charsets - JSON support escaping*
 
 * [Split array into chunks](PowerShellOneLiners.ps1#L124) *N objects in each array*
 
