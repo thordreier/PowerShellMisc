@@ -62,3 +62,46 @@ $data | ConvertTo-Json | ForEach-Object -Process {
 } -End {
     $s
 }
+
+
+
+
+###############################################################################
+# Split array into chunks
+###############################################################################
+
+#### N objects in each array ####
+
+# One-liner
+Get-Process | group {$i=0;{[math]::Floor($script:i++/100)}.GetNewClosure()}.Invoke() | %{"Name contains the number: $($_.Name). Do stuff with these $($_.Group.Count) objects"}
+
+# Multi-line version (without closures)
+$i=0
+Get-Process | Group-Object -Property {
+    [math]::Floor($script:i++ / 100)
+} | ForEach-Object -Process {
+    "Name contains the number: $($_.Name). Do stuff with these $($_.Group.Count) objects"
+}
+
+
+#### Max N bytes in each file (plus a little overhead) ####
+0..1000 | %{'x'*(random 1000)} | group (&{$i=$j=0;{$l=(ConvertTo-Json $_ -D 99 -C).Length;if(($script:j+=$l)-gt199KB){++$script:i;$script:j=$l};$i}.GetNewClosure()}) | %{ConvertTo-Json $_.Group -D 99 -C | sc "chunk-$($_.Name).json"}
+
+# Multi-line version
+0..1000 | ForEach-Object -Process {
+    'x' * (Get-Random -Maximum 1000)
+} | Group-Object -Property (&{
+    $i = 0
+    $j = 0
+    {
+        $l = (ConvertTo-Json -InputObject $_ -Depth 99 -Compress).Length
+        if (($script:j += $l) -gt 199KB)
+        {
+            ++$script:i
+            $script:j = $l
+        }
+        $i
+    }.GetNewClosure()
+}) | ForEach-Object -Process {
+    ConvertTo-Json -InputObject $_.Group -Depth 99 -Compress | Set-Content -Path "chunk-$($_.Name).json"
+}
