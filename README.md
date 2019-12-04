@@ -1,5 +1,7 @@
 # PowerShell Misc
 
+## Oneliners
+
 See [PowerShellOneLiners.ps1](PowerShellOneLiners.ps1) for some PowerShell one-liners.
 
 * [Some examples on multiple ways to achieve the same](PowerShellOneLiners.ps1#L9) *There's more than one way to do it*
@@ -13,3 +15,12 @@ See [PowerShellOneLiners.ps1](PowerShellOneLiners.ps1) for some PowerShell one-l
 * [Split array into chunks](PowerShellOneLiners.ps1#L124) *N objects in each array*
 
 * [Split array into chunks](PowerShellOneLiners.ps1#L149) *Max N bytes in each file (plus a little overhead)*
+
+
+## Useless PowerShell stuff
+
+* [ColorRoll](useless/ColorRoll.ps1) *Show a text, letters are coloured, the colours are "rolling"*
+
+* [RollText](useless/RollText.ps1) *Fill the screen with "rolling" text*
+
+* [Snow](useless/Snow.ps1) *Show some snow in the console*
