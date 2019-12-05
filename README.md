@@ -21,6 +21,10 @@ See [PowerShellOneLiners.ps1](PowerShellOneLiners.ps1) for some PowerShell one-l
 
 * [ColorRoll](useless/ColorRoll.ps1) *Show a text, letters are coloured, the colours are "rolling"*
 
+* [RandomTextTransformer](useless/RandomTextTransformer.ps1) *Generate code like* `('hells power'.ToCharArray()|random -C 99 -S 100085736)-join''`
+
 * [RollText](useless/RollText.ps1) *Fill the screen with "rolling" text*
 
 * [Snow](useless/Snow.ps1) *Show some snow in the console*
+
+* [SwitchPlace](useless/SwitchPlace.ps1) *Self generating code - strings switch place*
