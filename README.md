@@ -1,5 +1,8 @@
 # PowerShell Misc
 
+* [Analog Console Clock](AnalogConsoleClock.ps1) *An "analog" clock for the console*
+
+
 ## Oneliners
 
 See [PowerShellOneLiners.ps1](PowerShellOneLiners.ps1) for some PowerShell one-liners.
