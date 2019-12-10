@@ -1,6 +1,11 @@
 # PowerShell Misc
 
-* [Analog Console Clock](AnalogConsoleClock.ps1) *An "analog" clock for the console*
+
+## Analog Console Clock
+
+[Analog Console Clock](AnalogConsoleClock.ps1) *An "analog" clock for the console*
+
+![Analog Console Clock](AnalogConsoleClock.png)
 
 
 ## Oneliners
