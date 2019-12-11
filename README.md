@@ -1,11 +1,9 @@
 # PowerShell Misc
 
 
-## Half Kilo PowerShell Snake
+## Games
 
-[Half Kilo PowerShell Snake](HalfKiloPowerShellSnake.ps1) A PowerShell version of the classic snake game that's only 512 bytes big
-
-Also see explained version: [HalfKiloPowerShellSnakeExplained](HalfKiloPowerShellSnakeExplained.ps1)
+PowerShell games, eg. `Half Kilo PowerShell Snake`, can be found in the [PowerShellGames repository](https://github.com/thordreier/PowerShellGames)
 
 ![Half Kilo PowerShell Snake](HalfKiloPowerShellSnake.png)
 
