@@ -134,12 +134,12 @@ function StartClock ([Double] $Scale, [Double] $Border, [Double] $Radius, [Conso
     # If we sleep less (100 ms), but only do stuff if the second has changed, we don't have that problem
     while ($true)
     {
-        $second = Get-Date -Format ss
+        $second = [int] (Get-Date -Format ss)
 
         if ($second -ne $lastSecond)
         {
-            $minute = Get-Date -Format mm
-            $hour   = (Get-Date -Format hh) + (Get-Date -Format mm) / 60
+            $minute = [int] (Get-Date -Format mm)
+            $hour   = [float] ([int] (Get-Date -Format hh) + [int] (Get-Date -Format mm) / 60)
 
             # Whipe the old
             DrawHand -Scale $Scale -CenterX $centerX -CenterY $centerY -Radius $radiusSecond -Color $colorSecond -Type Second -Value $lastSecond -Text ' '
